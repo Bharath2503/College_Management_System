@@ -1,0 +1,58 @@
+<%- layout("boiler")-%>
+  <div style="margin-top: 10px;">
+    <h2 style="text-align: center;">Student Registration</h2>
+  </div>
+  <%- include("nav")-%> <br>
+
+    <form class="form" action="/student" method="post">
+      <!-- <h1 class="text-center pt-5">REGISTRATION FORM</h1> -->
+      <div style="background-color:beige" class="container">
+        <div class="mb-3">
+          STUDENT ID<br>
+          <input type="text" name="stu_id" class="form-control">
+        </div>
+        <div class="mb-3">
+          FIRST NAME<br>
+          <input type="text" name="f_name" class="form-control">
+        </div>
+        <div class=" mb-4">
+          LAST NAME<br><input type="text" class="form-control" name="l_name" id="mail">
+        </div>
+        <div class="form-outline mb-4">
+          GENDER<br>
+          <input class="form-check-input" type="radio" class="form-control" value="Male" name="gender">MALE<br>
+          <input class="form-check-input" type="radio" class="form-control" value="Female" name="gender">FEMALE
+        </div>
+        <div class=" mb-4">
+          EMAIL<br><input type="email" class="form-control" name="email" id="mail">
+        </div>
+
+        <div class=" mb-4">
+          PHONE NUMBER<br><input type="tel" class="form-control" name="p_num" id="rlno">
+        </div>
+        <div class=" mb-4">
+          DEPARTMENT<br><input type="text" class="form-control" name="dep">
+        </div>
+        <div class=" mb-4">
+          AGE<br><input type="number" class="form-control" name="age" id="rlno">
+        </div>
+        <div class=" mb-4">
+          ADDRESS<br><textarea name="address"></textarea>
+          <br><br>
+          <div class=" mb-4">
+            <select class="form-select" name="year">
+              <option selected>---YEAR---</option>
+              <option value="1">I</option>
+              <option value="2">II</option>
+              <option value="3">III</option>
+            </select>
+          </div>
+        </div>
+        <div align="center">
+        <button type="submit" class="btn btn-success">SUBMIT</button>
+        <button formaction="/viewstudent" formmethod="get" class="btn btn-secondary">VIEW STUDENT</button>
+        <button formaction="/deletestudent" formmethod="post" class="btn btn-danger">DELETE STUDENT</button>
+        <button formaction="/updatestudent" formmethod="post" class="btn btn-primary">UPDATE STUDENT</button> 
+      </div></div>
+      </div>
+    </form>

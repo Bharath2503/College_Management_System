@@ -1,0 +1,48 @@
+<%- layout("boiler")-%>
+    <div style="margin-top: 10px;">
+        <h2 style="text-align: center;">Student Information System</h2>
+    </div>
+    <%- include("nav")-%>
+
+<div class="container mt-5 ">
+        <div class="row my-3">
+            <div class="col-lg-6 offset-lg-3">
+                <div class="card shadow">
+                    <div class="card-body">
+               <h3 class="display-4 text-center">ADD A BOOK</h3>
+        <form class="row" name="form" action="/book" method="post">
+                <div class="mb-3 ">
+                    <label class="form-label" for="book_id" >BOOK NAME </label>
+                     <input class="form-control" type="text" id="Book_id"  name="books[Book_Name]" autofocus> 
+                </div>
+
+            <div class="mb-3 ">
+                <label class="form-label"  for="isbn">ISBN</label>
+                <input class="form-control" type="number" id="isbn" name="books[Isbn]"> 
+            </div>
+            
+            <div class="mb-3">
+                <label class="form-label" for="author"> BOOK AUTHOR:</label>
+                <input class="form-control" type="text" id="name" name="books[Book_Author]">
+                
+            </div>
+            
+            <div class="mb-3">
+                <label class="form-label" for="edition">BOOK EDITION:</label>
+                <select name="books[Book_Edition]" class="form-select" id="year">
+                    <option >select</option>
+                    <option value="I EDITION">I EDITION</option>
+                    <option value="II EDITION">II EDITION</option>
+                    <option value="III EDITION">III EDITION</option>
+                    <option value="IV EDITION">IV EDITION</option>
+                </select>    
+            </div>
+            <div class="d-grid gap-2">
+                <button class="btn btn-primary">ADD BOOK</button>
+            </div>
+            </form>
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>

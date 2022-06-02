@@ -1,0 +1,49 @@
+<%- layout("boiler")-%>
+  <div style="margin-top: 10px;">
+    <h2 style="text-align: center;">Staff Registration</h2>
+  </div>
+  <%- include("nav")-%> <br>
+    <form>
+
+      <div style="background-color:bisque" class="container mt-5  p-5">
+        <div class="mb-3">
+          FACULTY ID<br>
+          <input type="text" name="fid" class="form-control">
+        </div>
+        <div class="mb-3">
+          FACULTY NAME<br>
+          <input type="text" name="fname" class="form-control">
+        </div>
+        <div class=" mb-4">
+          COURSE<br>
+          <input type="text" name="cname" class="form-control" id="mail">
+        </div>
+        <div class="form-outline mb-4">
+          GENDER<br>
+          <input class="form-check-input" type="radio" class="form-control" value="Male" name="gender">MALE<br>
+          <input class="form-check-input" type="radio" class="form-control" value="Female" name="gender">FEMALE
+        </div>
+        <div class=" mb-4">
+          DEPARTMENT <br>
+          <select class="form-select" name="dep">
+            <option selected>---DEPARTMENT---</option>
+            <option value="CS">COMPUTER SCIENCE</option>
+            <option value="IT">INFORMATION TECHNOLOGY</option>
+            <option value="CIVIL">CIVIL ENGINEERING</option>
+            <option value="ECE">ECE</option>
+            <option value="MECH">MECHANICAL ENGINEERING</option>
+            <option value="EEE">EEE</option>
+          </select>
+        </div>
+
+        <div class=" mb-4">
+          SALARY<br><input type="number" class="form-control" name="sal" id="rlno">
+        </div>
+        <div align="center">
+          <button type="submit" formaction="/staff" formmethod="post" class="btn btn-success">SUBMIT</button>
+          <button formaction="/viewstaff" formmethod="get" class="btn btn-secondary">VIEW STAFF </button>
+          <button formaction="/deletestaff" formmethod="post" class="btn btn-danger">DELETE STAFF </button>
+          <button formaction="/updatestaff" formmethod="post" class="btn btn-primary">UPDATE STAFF </button>
+        </div>
+      </div>
+    </form>

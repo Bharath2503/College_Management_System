@@ -1,0 +1,45 @@
+<%- layout("boiler")-%>
+    <div style="margin-top: 10px;">
+        <h2 style="text-align: center;">View Staff Data</h2>
+    </div>
+    <%- include("nav")-%>
+        <div class="container">
+            <table class="table table bordered">
+                <tr>
+                    <th>FACULTY ID</th>
+                    <th>FACULTY NAME</th>
+                    <th>COURSE</th>
+                    <th>GENDER</th>
+                    <th>DEPARTMENT</th>
+                    <th>SALARY</th>
+
+
+
+                </tr>
+                <% for( let index=0; index < rows.length; index++ ) { %>
+                    <tr>
+
+                        <td>
+                            <%=rows[index].F_id%>
+                        </td>
+                        <td>
+                            <%=rows[index].F_name%>
+                        </td>
+                        <td>
+                            <%=rows[index].course%>
+                        </td>
+                        <td>
+                            <%=rows[index].gender%>
+                        </td>
+
+                        <td>
+                            <%=rows[index].department%>
+                        </td>
+                        <td>
+                            <%=rows[index].salary%>
+                        </td>
+                    </tr>
+                     <% } %>
+            </table>
+        </div>
+       

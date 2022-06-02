@@ -1,0 +1,29 @@
+<%- layout("boiler")-%>
+    <div style="margin-top: 10px;">
+        <h2 style="text-align: center;">View Marks Data</h2>
+    </div>
+    <%- include("nav")-%>
+    <div class="container">
+        <table class="table table bordered">
+            <tr>
+                <th>STUDENT ID</th>
+                <th>NAME</th>
+                <th>CGPA</th>
+            </tr>
+          <tr>  <%  for( let index=0; index < rows.length; index++ ) { %>
+                
+                    <td>
+                        <%=rows[index].student_id%>
+                    </td>
+                    <td>
+                        <%=rows[index].first_name%>
+                    </td>
+                    <td>
+                        <%=rows[index].CGPA%>
+                    </td>
+
+                </tr>
+            <% } %>
+        </table>
+</div>
+       
