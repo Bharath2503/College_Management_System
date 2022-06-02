@@ -1,0 +1,2 @@
+# miniproject
+#COLLEGE MANAGEMENT SYSTEM
