@@ -68,13 +68,13 @@ app.get('/viewstudent', (req, res) => {
 })
 //STUDENT INSERT
 app.post('/student', (req, res) => {
-    let { stu_id, f_name, l_name, gender, email, p_num, dep, age, address, year } = req.body
+    let { stu_id, f_name, l_name, gender, email, p_num, dep,course, age, address, year } = req.body
     pool.getConnection((err, result) => {
         if (err) console.log(err.message)
         else {
             console.log('student connected')
             console.log(result)
-            var sql = `INSERT INTO test (student_id,first_name,last_name,gender,email,department,ph_no,age,address,year) VALUES ('${stu_id}','${f_name}','${l_name}','${gender}','${email}','${dep}',${p_num},${age},'${address}','${year}');`
+            var sql = `INSERT INTO test (student_id,first_name,last_name,gender,email,department,course,ph_no,age,address,year) VALUES ('${stu_id}','${f_name}','${l_name}','${gender}','${email}','${dep}','${course}',${p_num},${age},'${address}','${year}');`
             result.query(sql, (err, rows, fiels) => {
                 if (err) console.log(err)
                 else {
