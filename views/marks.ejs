@@ -1,0 +1,26 @@
+<%- layout("boiler")-%>
+    <div style="margin-top: 10px;">
+        <h2 style="text-align: center;">MARKS</h2>
+    </div>
+    <%- include("nav")-%>
+        <div class="container">
+            <form action="/marks" method="post">
+                <div style="background-color:bisque" class="container mt-5  p-5">
+                    <div class="mb-3">
+                        STUDENT ID<br>
+                        <input type="text" name="rollno" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        CGPA<br>
+                        <input type="number" name="cgpa" class="form-control">
+                    </div>
+                    <div class=" mb-4">
+                        BACKLOGS<br>
+                        <input type="number" name="arrear" class="form-control">
+                    </div>
+                     <button type="submit" class="btn btn-secondary">submit</button>
+                </div>
+               
+        </div>
+        </form>
+        </div>
