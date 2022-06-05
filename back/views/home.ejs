@@ -1,23 +1,33 @@
 <%- layout("boiler")-%>
+<style>
+    body{
+        background-image:url("images/bg.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+</style>
     <div style="margin-top: 10px;">
         <h2 style="text-align: center;">College Management System</h2>
     </div>
     <%- include("nav")-%>
         <div  align="center" style="margin-top: 10%;" >
             <div class="container row text-center">
+
+                <div class="col-md-1 "></div>
                 <div class="col-md-4 "> <div class="overlay">
                 <a href="/staff"> <img
                             src="https://icons.veryicon.com/png/o/business/monochrome-financial-and-business-icons/staff-6.png"
                             alt="staff" style="width:150px; height:150px;"></a>
                     <h5> <a href="/staff" style="text-decoration: none; color: black;"> Staff Registration</a></h5>
                 </div></div>
-                <div class="col-md-4"><a href="/student">
+                <div class="col-md-3"><a href="/student">
                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgcYH58PIPmzKyGOiOXvGC-RBL6NABnWPT9A&usqp=CAU"
                             alt="student" style="width:150px; height:150px;"></a>
                     <h5><a href="/student" style="text-decoration: none; color: black;">Student Registration</a>
                     </h5>
                 </div>
-                <div class="col-md-4"> <a href="/marks">
+                <div class="col-md-3"> <a href="/marks">
                         <img src="https://cdn1.iconfinder.com/data/icons/learning-and-entertainment-flat-icons/512/kaoshi.png"
                             alt="marks" style="width:150px; height:150px;"></a>
                     <h5><a href="/marks" style="text-decoration: none; color: black;">Marks</a>

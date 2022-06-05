@@ -75,7 +75,7 @@ app.post('/student', (req, res) => {
             console.log('student connected')
             console.log(result)
             var sql = `INSERT INTO test (student_id,first_name,last_name,gender,email,department,course,ph_no,age,address,year) VALUES ('${stu_id}','${f_name}','${l_name}','${gender}','${email}','${dep}','${course}',${p_num},${age},'${address}','${year}');`
-            result.query(sql, (err, rows, fiels) => {
+            result.query(sql, (err, rows, fields) => {
                 if (err) console.log(err)
                 else {
                     console.log(rows)
